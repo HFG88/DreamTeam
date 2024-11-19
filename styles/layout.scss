@@ -1,0 +1,23 @@
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 100%;
+
+  /* grid items eru miðjuð */
+  justify-items: center;
+  gap: var(--offset);
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+}
+
+header {
+  max-width: 100%;
+}
+
+main {
+  max-width: var(--width-offset);
+}
+
+footer { 
+}

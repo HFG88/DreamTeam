@@ -1,0 +1,52 @@
+html {
+  box-sizing: border-box;
+  font-size: var(--font-size);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.5rem 3rem;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  will-change: filter;
+  transition: filter 300ms;
+  transition: border-color 0.25s;
+}
+
+button:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+  color: #646cff;
+}
+
+img {
+  max-width: 100%;
+}
+
+.hidden {
+  display: none !important;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+}
+
+a {
+  color: inherit;
+}

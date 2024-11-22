@@ -7,6 +7,7 @@ import {
 } from './lib/components/pageComponents.js';
 import { qs } from './lib/elements.js';
 import { renderContentPage } from './lib/pages/contentPage.js';
+import renderFlashcards from './lib/pages/flashcardsPage.js';
 import { renderSubpageIndex } from './lib/pages/renderSubpage.js';
 
 const body = qs(document, 'body');
@@ -35,9 +36,12 @@ export async function render(body, queryString) {
 
   if (!type && !content) {
     changeTitle('Dream Team');
+    
+
     resetMain(body);
   }
   else if (!content) {
+    renderFlashcards(type);
     renderSubpageIndex(body, type);
   }
   else{

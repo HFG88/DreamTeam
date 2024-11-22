@@ -17,7 +17,6 @@ window.addEventListener('popstate', () => {
   render(body, window.location.search);
 });
 
-
 /**
  * 
  * @param {Element} body 
@@ -25,7 +24,7 @@ window.addEventListener('popstate', () => {
  * @returns 
  */
 export async function render(body, queryString) {
-  console.log(`Render function- QueeryString: ${queryString}`);
+  console.log(`Render function - QueryString: ${queryString}`);
   renderHeader(body);
   renderMain(body);
   renderFooter(body);
@@ -36,19 +35,22 @@ export async function render(body, queryString) {
 
   if (!type && !content) {
     changeTitle('Dream Team');
-    
-
     resetMain(body);
-  }
+  } 
+  else if (!content && type === 'flashcards') {
+    console.log('Rendering flashcards page');
+    await renderFlashcards(type); // Render flashcards page
+  } 
   else if (!content) {
-    renderFlashcards(type);
-    renderSubpageIndex(body, type);
-  }
+    console.log('Rendering subpage index');
+    renderSubpageIndex(body, type); // Render subpage index
+  } 
   else if (content === 'flashcards') {
-    await renderFlashcards(type); // Handle flashcards rendering
-  }
-  
-  else{
+    console.log('Rendering flashcards content');
+    await renderFlashcards(type);
+  } 
+  else {
+    console.log('Rendering content page');
     renderContentPage(body, type, content);
   }
 }

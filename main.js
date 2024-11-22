@@ -44,6 +44,10 @@ export async function render(body, queryString) {
     renderFlashcards(type);
     renderSubpageIndex(body, type);
   }
+  else if (content === 'flashcards') {
+    await renderFlashcards(type); // Handle flashcards rendering
+  }
+  
   else{
     renderContentPage(body, type, content);
   }

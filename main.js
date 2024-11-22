@@ -1,11 +1,11 @@
-import { changeTitle } from './lib/changeTitle.js';
-import { resetMain } from './lib/clearComponents.js';
+import { changeTitle } from './lib/Helpers/changeTitle.js';
+import { resetMain } from './lib/Helpers/clearComponents.js';
 import {
   renderFooter,
   renderHeader,
   renderMain,
 } from './lib/components/pageComponents.js';
-import { qs } from './lib/elements.js';
+import { qs } from './lib/Helpers/elements.js';
 import { renderContentPage } from './lib/pages/contentPage.js';
 import renderFlashcards from './lib/pages/flashcardsPage.js';
 import { renderSubpageIndex } from './lib/pages/renderSubpage.js';
@@ -26,9 +26,9 @@ window.addEventListener('popstate', () => {
  */
 export async function render(body, queryString) {
   console.log(`Render function- QueeryString: ${queryString}`);
-  renderHeader(body);
-  renderMain(body);
-  renderFooter(body);
+  await renderHeader(body);
+  await renderMain(body);
+  await renderFooter(body);
 
   const params = new URLSearchParams(queryString);
   const type = params.get('type');

@@ -8,8 +8,6 @@ export default defineConfig({
     stylelintPlugin(),
   ],
   server: {
-    hmr: {
-      overlay: false, // Disable the error overlay
-    },
+    hmr: false, // Completely disable HMR
   },
 });

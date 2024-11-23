@@ -1,0 +1,3 @@
+[submodule "DreamTeam"]
+	path = DreamTeam
+	url = https://github.com/HFG88/DreamTeam.git

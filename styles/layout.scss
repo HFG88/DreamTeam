@@ -23,3 +23,13 @@ footer {
   //Pointless
   color: inherit;
 }
+
+.navigation{
+  width: 100%;
+
+}
+
+.navigation__list{
+  display: flex;
+  flex-direction: row;
+}

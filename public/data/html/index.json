@@ -23,6 +23,13 @@
       "slug": "questions",
       "title": "Spurningar",
       "text": "Æfðu þig fyrir próf með því að svara spurningum."
-    }
+    },
+    {
+      "type": "flashcards",
+      "url": "keywords.json",
+      "slug": "flashcards",
+      "title": "Flashcards",
+      "text": "Prófaðu flash cards."
+      }
   ]
 }

@@ -21,11 +21,12 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: #5a3ed8;
   cursor: pointer;
   will-change: filter;
   transition: filter 300ms;
   transition: border-color 0.25s;
+  color: rgb(211 226 211 / 94.1%);
 }
 
 button:hover {

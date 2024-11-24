@@ -7,7 +7,6 @@ import {
 } from './lib/components/pageComponents.js';
 import { qs } from './lib/Helpers/elements.js';
 import { renderContentPage } from './lib/pages/contentPage.js';
-import renderFlashcards from './lib/pages/flashcardsPage.js';
 import { renderSubpageIndex } from './lib/pages/renderSubpage.js';
 
 const body = qs(document, 'body');
@@ -37,17 +36,9 @@ export async function render(body, queryString) {
     changeTitle('Dream Team');
     resetMain(body);
   } 
-  else if (!content && type === 'flashcards') {
-    console.log('Rendering flashcards page');
-    await renderFlashcards(type); // Render flashcards page
-  } 
   else if (!content) {
     console.log('Rendering subpage index');
-    renderSubpageIndex(body, type); // Render subpage index
-  } 
-  else if (content === 'flashcards') {
-    console.log('Rendering flashcards content');
-    await renderFlashcards(type);
+    renderSubpageIndex(body, type); 
   } 
   else {
     console.log('Rendering content page');
